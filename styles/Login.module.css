@@ -1,0 +1,62 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.imgLeft {
+  position: relative;
+  width: 45%;
+  height: 100%;
+}
+
+.rightContent {
+  position: relative;
+  width: 55%;
+  height: 100%;
+  background-color: black;
+}
+
+.logo {
+  margin-top: 18px;
+  margin-left: 18px;
+}
+
+.titles {
+  color: white;
+  font-size: xx-large;
+  margin-left: 18px;
+}
+
+.titles h1 {
+  margin: 0;
+}
+
+.buttonStyle1 {
+  background-color: #3498db;
+  border-radius: 8px;
+  padding: 10px 40px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-left: 36px;
+  display: block;
+  margin-bottom: 28px;
+}
+.buttonStyle2 {
+  border-radius: 8px;
+  padding: 10px 40px;
+  color: #3498db;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-left: 36px;
+}
+
+.buttons p {
+  color: #fff;
+  margin-left: 18px;
+  font-weight: bold;
+}
