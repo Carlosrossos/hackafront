@@ -1,15 +1,15 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Tweet.module.css';
 
-function Home() {
+function Tweet() {
   return (
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-         Home
+         Tweet
         </h1>
       </main>
     </div>
   );
 }
 
-export default Home;
+export default Tweet;

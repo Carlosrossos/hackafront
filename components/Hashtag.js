@@ -1,15 +1,15 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Hashtag.module.css';
 
-function Home() {
+function Hashtag() {
   return (
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-         Home
+         Hashtag
         </h1>
       </main>
     </div>
   );
 }
 
-export default Home;
+export default Hashtag;

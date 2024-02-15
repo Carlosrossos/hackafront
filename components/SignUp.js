@@ -1,15 +1,15 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/SignUp.module.css';
 
-function Home() {
+function SignUp() {
   return (
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-         Home
+          SignUp
         </h1>
       </main>
     </div>
   );
 }
 
-export default Home;
+export default SignUp;

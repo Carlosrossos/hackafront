@@ -1,15 +1,15 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Trends.module.css';
 
-function Home() {
+function Trends() {
   return (
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-         Home
+          Trends
         </h1>
       </main>
     </div>
   );
 }
 
-export default Home;
+export default Trends;

@@ -1,15 +1,15 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/LastTweets.module.css';
 
-function Home() {
+function LastTweets() {
   return (
     <div>
       <main className={styles.main}>
         <h1 className={styles.title}>
-         Home
+          LastTweets
         </h1>
       </main>
     </div>
   );
 }
 
-export default Home;
+export default LastTweets;
