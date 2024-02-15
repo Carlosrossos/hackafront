@@ -1,0 +1,26 @@
+.main {
+    height: 25vh;
+}
+
+.title {
+    margin: 0;
+}
+
+.centre {
+    width: 100%;
+    padding: 50px;
+}
+
+.input {
+    width: 100%;
+    background-color:rgb(22,29,40) ;
+    border: 1px solid rgb(53, 69, 95);
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+}
+
+.compteur {
+    display: flex;
+    justify-content: flex-end;
+}
