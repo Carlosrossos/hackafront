@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [],
+    domains: ["cdn.cms-twdigitalassets.com", "www.galea-associes.eu"],
   },
 };
 
