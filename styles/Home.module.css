@@ -12,6 +12,9 @@
   flex-direction: column;
   justify-content: space-between;
   width: 20%;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 
 }
 
@@ -25,6 +28,25 @@
   border-right: 2px solid white;
 }
 
-.infosUser {
+.textUser{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.user {
+  display: flex;
+}
+
+.boutonLogout {
+  width: 150px;
+  height: 40px;
+  background-color: rgb(22,29,40);
+  border-radius: 25px;
+  margin-top: 15px;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+
 
 }
