@@ -7,8 +7,8 @@ function Tweet() {
   const [tweetText, setTweetLength] = useState('');
   const user = useSelector((state) => state.user.value);
 
-  const pattern = /#\w+/gi;
-  const hashtags = tweetText.match(pattern);
+  console.log(user)
+  console.log(user.token)
 
   const handleTweet = () => {
     fetch('http://localhost:3000/tweets', {
@@ -17,12 +17,10 @@ function Tweet() {
       body: JSON.stringify({
         text: tweetText,
         date: new Date(),
-        hashtag: hashtags,
         author: user.token,
       })
     })
     .then(response => response.json())
-    .then(data => {})
   }
 
   return (
