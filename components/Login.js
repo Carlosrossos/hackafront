@@ -1,7 +1,20 @@
 import Image from "next/image";
+import React, { useState } from "react";
 import styles from "../styles/Login.module.css";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 
 function Login() {
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
+
+  const handleSignInClose = () => {
+    setShowSignIn(false);
+  };
+  const handleSignUpClose = () => {
+    setShowSignUp(false);
+  };
+
   return (
     <div>
       <main className={styles.main}>
@@ -27,10 +40,26 @@ function Login() {
             <h2>Join Hackatweet today.</h2>
           </div>
           <div className={styles.buttons}>
-            <button className={styles.buttonStyle1}>Sign up</button>
+            <button
+              onClick={() => {
+                setShowSignUp(true);
+              }}
+              className={styles.buttonStyle1}
+            >
+              Sign up
+            </button>
             <p>Already have an account?</p>
-            <button className={styles.buttonStyle2}>Sign in</button>
+            <button
+              onClick={() => {
+                setShowSignIn(true);
+              }}
+              className={styles.buttonStyle2}
+            >
+              Sign in
+            </button>
           </div>
+          {showSignIn && <SignIn onClose={handleSignInClose} />}
+          {showSignUp && <SignUp onClose={handleSignUpClose} />}
         </div>
       </main>
     </div>
