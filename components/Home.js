@@ -5,7 +5,6 @@ import LastTweets from "./LastTweets";
 import Trends from "./Trends";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../reducers/user";
-import Link from 'next/link';
 
 function Home() {
   const user = useSelector((state) => state.user.value);
@@ -20,7 +19,6 @@ function Home() {
     <div>
       <main className={styles.main}>
         <div className={styles.bandeauGauche}>
-          <Link href="/home">
             <div>
             <Image
               src="/logo-twitter-blanc.png"
@@ -29,7 +27,6 @@ function Home() {
               height={50}
             />
             </div>
-          </Link>
           <div className={styles.infosUser}>
             <div className={styles.user}>
               <Image
@@ -40,7 +37,7 @@ function Home() {
               />
               <div className={styles.textUser}>
                 <p>PRENOM</p>
-                <p>username</p>
+                <p>@{user.username}</p>
               </div>
             </div>
             <button onClick={()=>{handleLogout()}}className={styles.boutonLogout}>Logout</button>
