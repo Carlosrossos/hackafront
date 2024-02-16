@@ -2,6 +2,7 @@ import styles from "../styles/OneTweet.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faTrash } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 function OneTweet(props) {
 
@@ -35,12 +36,12 @@ const handleDeleteTweet = () => {
         ></Image>
         <p>
           <span>Prénom</span>
-          <span>Username</span>
+          <span>{props.username}</span>
           <span>{props.published}</span>
         </p>
       </div>
       <p>
-        {props.text} <span>HASHTAG</span>
+        {props.text}
       </p>
       <div>
         <FontAwesomeIcon

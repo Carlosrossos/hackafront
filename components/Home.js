@@ -5,14 +5,16 @@ import LastTweets from "./LastTweets";
 import Trends from "./Trends";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../reducers/user";
+import { useRouter } from "next/router";
 
 function Home() {
   const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleLogout = () => {
 		dispatch(logout());
-
+    router.push("/");
   }
 
   return (

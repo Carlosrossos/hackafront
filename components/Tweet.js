@@ -1,14 +1,14 @@
 import styles from '../styles/Tweet.module.css';
 import {useState} from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { newTweet } from '../reducers/tweets';
 
 function Tweet() {
 
   const [tweetText, setTweetLength] = useState('');
   const user = useSelector((state) => state.user.value);
 
-  console.log(user)
-  console.log(user.token)
+  const dispatch = useDispatch();
 
   const handleTweet = () => {
     fetch('http://localhost:3000/tweets', {
@@ -21,6 +21,10 @@ function Tweet() {
       })
     })
     .then(response => response.json())
+    .then(data => {
+      data ? setTweetLength('') : prompt('Erreur')
+      dispatch(newTweet({text: tweetText, date:new Date(), author: user.token}))
+    } )
   }
 
   return (
